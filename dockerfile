@@ -6,12 +6,14 @@ RUN apt-get update && \
     apt-get install -y nodejs npm
 
 # Créer et définir le répertoire de travail dans le conteneur
-WORKDIR /test-docker-ubuntu-node
+WORKDIR /ubuntunode
 
 # Copier le fichier package.json et package-lock.json
 COPY package*.json ./
 
-# Installer les dépendances
+# Copier le dossier node_modules (contenant les modules précompilés)
+#COPY node_modules /ubuntunode/node_modules
+
 RUN npm install
 
 # Copier les fichiers de l'application
