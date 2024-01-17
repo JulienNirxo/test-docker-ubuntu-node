@@ -1,0 +1,12 @@
+{
+  "name": "mon-projet-node",
+  "version": "1.0.0",
+  "description": "Un exemple de projet Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
